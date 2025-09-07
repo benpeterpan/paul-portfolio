@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paul Lawrence - Creative Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fce7f3; /* Warm background color */
+        }
+        .collapsible-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-in-out;
+        }
+        .collapsible-content.open {
+            max-height: 500px; /* A large value to allow content to expand */
+        }
+        .dropdown-arrow {
+            transition: transform 0.3s ease-in-out;
+        }
+        .dropdown-arrow.open {
+            transform: rotate(180deg);
+        }
+        .profile-photo {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid #fff;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <div class="container mx-auto p-4 sm:p-8">
+
+        <!-- Header Section -->
+        <header class="text-center py-12">
+            <div class="flex flex-col items-center">
+                <img src="uploaded:image_0c3681.jpg" alt="Paul Lawrence" class="profile-photo mb-4">
+                <h1 class="text-4xl sm:text-5xl font-bold text-gray-900 mb-2">Paul Lawrence</h1>
+                <p class="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto mb-4">
+                    Experienced graphic designer and web funnel specialist with a passion for creating impactful and user-friendly digital experiences. I bring brands to life and drive conversions with strategic design.
+                </p>
+            </div>
+        </header>
+
+        <!-- Skills Section -->
+        <h2 class="text-3xl font-semibold text-gray-800 mb-6 text-center">My Skills</h2>
+        <section class="flex flex-wrap justify-center gap-4 mb-12">
+            <span class="bg-fuchsia-200 text-fuchsia-800 px-4 py-2 rounded-full font-medium shadow-sm">Graphic Design</span>
+            <span class="bg-fuchsia-200 text-fuchsia-800 px-4 py-2 rounded-full font-medium shadow-sm">Web Funnel Building</span>
+            <span class="bg-fuchsia-200 text-fuchsia-800 px-4 py-2 rounded-full font-medium shadow-sm">Brand Identity</span>
+            <span class="bg-fuchsia-200 text-fuchsia-800 px-4 py-2 rounded-full font-medium shadow-sm">UI/UX Design</span>
+            <span class="bg-fuchsia-200 text-fuchsia-800 px-4 py-2 rounded-full font-medium shadow-sm">Copywriting</span>
+            <span class="bg-fuchsia-200 text-fuchsia-800 px-4 py-2 rounded-full font-medium shadow-sm">Software Development</span>
+            <span class="bg-fuchsia-200 text-fuchsia-800 px-4 py-2 rounded-full font-medium shadow-sm">Brand Strategist</span>
+        </section>
+
+        <!-- Completed Projects Section -->
+        <h2 class="text-3xl font-semibold text-gray-800 mb-6 text-center">Completed Projects</h2>
+        <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+
+            <!-- Project 1: Branding for a Tech Startup -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:scale-105">
+                <img src="https://placehold.co/600x400/0d9488/ffffff?text=Tech+Brand" alt="Tech Startup Branding" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="font-bold text-xl mb-2">Tech Startup Branding</h3>
+                    <p class="text-gray-600 text-sm mb-4">A complete brand identity for a new software company.</p>
+                    
+                    <!-- Project Stages -->
+                    <div class="space-y-4">
+                        <div class="border rounded-lg p-3">
+                            <button class="flex items-center justify-between w-full font-medium" onclick="toggleCollapse(this)">
+                                <span>Stage 1: Discovery & Research</span>
+                                <svg class="w-4 h-4 text-gray-500 dropdown-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            <div class="collapsible-content mt-2 text-sm text-gray-500">
+                                <p>Initial client meeting, creation of mood boards, and comprehensive competitor analysis to define the project's direction.</p>
+                            </div>
+                        </div>
+                        <div class="border rounded-lg p-3">
+                            <button class="flex items-center justify-between w-full font-medium" onclick="toggleCollapse(this)">
+                                <span>Stage 2: Conceptualization & Sketching</span>
+                                <svg class="w-4 h-4 text-gray-500 dropdown-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            <div class="collapsible-content mt-2 text-sm text-gray-500">
+                                <p>Explored several logo concepts, developed initial sketches, and started defining brand guidelines to reflect the company's values.</p>
+                            </div>
+                        </div>
+                        <div class="border rounded-lg p-3">
+                            <button class="flex items-center justify-between w-full font-medium" onclick="toggleCollapse(this)">
+                                <span>Stage 3: Design & Refinement</span>
+                                <svg class="w-4 h-4 text-gray-500 dropdown-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            <div class="collapsible-content mt-2 text-sm text-gray-500">
+                                <p>Created digital mockups, finalized the color palette, and selected typography to ensure a cohesive visual identity.</p>
+                            </div>
+                        </div>
+                        <div class="border rounded-lg p-3">
+                            <button class="flex items-center justify-between w-full font-medium" onclick="toggleCollapse(this)">
+                                <span>Stage 4: Final Deliverables</span>
+                                <svg class="w-4 h-4 text-gray-500 dropdown-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            <div class="collapsible-content mt-2 text-sm text-gray-500">
+                                <p>Exported all final files for web and print use and provided a comprehensive brand style guide document.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2: E-commerce Website Design -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:scale-105">
+                <img src="https://placehold.co/600x400/a3e635/ffffff?text=E-commerce+Site" alt="E-commerce Website" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="font-bold text-xl mb-2">E-commerce Website Design</h3>
+                    <p class="text-gray-600 text-sm mb-4">A responsive e-commerce site for a clothing boutique.</p>
+                    
+                    <!-- Project Stages -->
+                    <div class="space-y-4">
+                        <div class="border rounded-lg p-3">
+                            <button class="flex items-center justify-between w-full font-medium" onclick="toggleCollapse(this)">
+                                <span>Stage 1: Strategy & Planning</span>
+                                <svg class="w-4 h-4 text-gray-500 dropdown-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            <div class="collapsible-content mt-2 text-sm text-gray-500">
+                                <p>Mapped out the user flow, created a detailed sitemap, and selected the appropriate e-commerce platform.</p>
+                            </div>
+                        </div>
+                        <div class="border rounded-lg p-3">
+                            <button class="flex items-center justify-between w-full font-medium" onclick="toggleCollapse(this)">
+                                <span>Stage 2: Wireframing & Prototyping</span>
+                                <svg class="w-4 h-4 text-gray-500 dropdown-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            <div class="collapsible-content mt-2 text-sm text-gray-500">
+                                <p>Developed low-fidelity wireframes and an interactive prototype for client feedback on the user journey and layout.</p>
+                            </div>
+                        </div>
+                        <div class="border rounded-lg p-3">
+                            <button class="flex items-center justify-between w-full font-medium" onclick="toggleCollapse(this)">
+                                <span>Stage 3: Design & Development</span>
+                                <svg class="w-4 h-4 text-gray-500 dropdown-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            <div class="collapsible-content mt-2 text-sm text-gray-500">
+                                <p>Created high-fidelity design mockups and performed front-end development of all pages, focusing on responsiveness.</p>
+                            </div>
+                        </div>
+                        <div class="border rounded-lg p-3">
+                            <button class="flex items-center justify-between w-full font-medium" onclick="toggleCollapse(this)">
+                                <span>Stage 4: Launch & Testing</span>
+                                <svg class="w-4 h-4 text-gray-500 dropdown-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            <div class="collapsible-content mt-2 text-sm text-gray-500">
+                                <p>Conducted final bug testing, deployed the site to the live server, and provided post-launch support.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project 3: Social Media Campaign Graphics -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:scale-105">
+                <img src="https://placehold.co/600x400/c084fc/ffffff?text=Social+Media" alt="Social Media Graphics" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="font-bold text-xl mb-2">Social Media Campaign</h3>
+                    <p class="text-gray-600 text-sm mb-4">Engaging graphics for a month-long social media campaign.</p>
+                    
+                    <!-- Project Stages -->
+                    <div class="space-y-4">
+                        <div class="border rounded-lg p-3">
+                            <button class="flex items-center justify-between w-full font-medium" onclick="toggleCollapse(this)">
+                                <span>Stage 1: Content Strategy</span>
+                                <svg class="w-4 h-4 text-gray-500 dropdown-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            <div class="collapsible-content mt-2 text-sm text-gray-500">
+                                <p>Defined the campaign goals, identified the target audience, and established core content pillars to guide the visual direction.</p>
+                            </div>
+                        </div>
+                        <div class="border rounded-lg p-3">
+                            <button class="flex items-center justify-between w-full font-medium" onclick="toggleCollapse(this)">
+                                <span>Stage 2: Visual Concept Creation</span>
+                                <svg class="w-4 h-4 text-gray-500 dropdown-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            <div class="collapsible-content mt-2 text-sm text-gray-500">
+                                <p>Designed mood boards and developed a cohesive visual theme for all social media posts and stories.</p>
+                            </div>
+                        </div>
+                        <div class="border rounded-lg p-3">
+                            <button class="flex items-center justify-between w-full font-medium" onclick="toggleCollapse(this)">
+                                <span>Stage 3: Production & Scheduling</span>
+                                <svg class="w-4 h-4 text-gray-500 dropdown-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            <div class="collapsible-content mt-2 text-sm text-gray-500">
+                                <p>Created all of the graphics, wrote engaging captions, and prepared the content calendar for the full month.</p>
+                            </div>
+                        </div>
+                        <div class="border rounded-lg p-3">
+                            <button class="flex items-center justify-between w-full font-medium" onclick="toggleCollapse(this)">
+                                <span>Stage 4: Delivery & Analytics</span>
+                                <svg class="w-4 h-4 text-gray-500 dropdown-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            <div class="collapsible-content mt-2 text-sm text-gray-500">
+                                <p>Provided all final assets to the client and tracked key performance metrics throughout the campaign to measure success.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Ongoing Project Section -->
+        <h2 class="text-3xl font-semibold text-gray-800 mb-6 text-center">Ongoing Project</h2>
+        <section class="flex justify-center">
+            <!-- Project 4: Client Funnel Optimization (Ongoing) -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:scale-105 max-w-lg">
+                <img src="https://placehold.co/600x400/f87171/ffffff?text=In+Progress" alt="Ongoing Project" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="font-bold text-xl mb-2">Client Funnel Optimization</h3>
+                    <p class="text-gray-600 text-sm mb-4">Currently working with a marketing firm to optimize and redesign their web funnels.</p>
+
+                    <!-- Project Stages -->
+                    <div class="space-y-4">
+                        <div class="border rounded-lg p-3">
+                            <button class="flex items-center justify-between w-full font-medium" onclick="toggleCollapse(this)">
+                                <span>Stage 1: Discovery & Analysis</span>
+                                <svg class="w-4 h-4 text-gray-500 dropdown-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            <div class="collapsible-content mt-2 text-sm text-gray-500">
+                                <p>Reviewed the client's existing funnels and identified key areas for improvement and conversion bottlenecks.</p>
+                            </div>
+                        </div>
+                        <div class="border rounded-lg p-3">
+                            <button class="flex items-center justify-between w-full font-medium" onclick="toggleCollapse(this)">
+                                <span>Stage 2: Redesign Strategy</span>
+                                <svg class="w-4 h-4 text-gray-500 dropdown-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            <div class="collapsible-content mt-2 text-sm text-gray-500">
+                                <p>Developed a new user journey, created wireframes for new pages, and designed a cleaner aesthetic for the funnels.</p>
+                            </div>
+                        </div>
+                        <div class="border rounded-lg p-3 bg-gray-200">
+                            <button class="flex items-center justify-between w-full font-medium text-gray-600" disabled>
+                                <span>Stage 3: Design & Implementation (In Progress)</span>
+                                <svg class="w-4 h-4 text-gray-500 dropdown-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="border rounded-lg p-3 bg-gray-200">
+                            <button class="flex items-center justify-between w-full font-medium text-gray-600" disabled>
+                                <span>Stage 4: A/B Testing & Optimization (Pending)</span>
+                                <svg class="w-4 h-4 text-gray-500 dropdown-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Get in Touch Section -->
+        <h2 class="text-3xl font-semibold text-gray-800 mb-6 text-center mt-12">Get in Touch</h2>
+        <section class="flex flex-col items-center mb-12">
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-6 text-center">
+                I'm always open to new opportunities. Let's create something great together.
+            </p>
+            <div class="flex flex-wrap justify-center gap-6">
+                <!-- LinkedIn -->
+                <a href="https://www.linkedin.com/in/paul-lawrence-24723729b/" target="_blank" class="flex items-center gap-2 bg-white rounded-full px-6 py-3 shadow-md transition-transform duration-200 hover:scale-105">
+                    <svg class="w-6 h-6 text-blue-700" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.567c0-1.391-.027-3.194-1.944-3.194-1.945 0-2.245 1.512-2.245 3.097v5.664H9.278V9.72h3.411v1.561h.046c.477-.905 1.637-1.859 3.37-1.859 3.613 0 4.28 2.378 4.28 5.488v6.33h.002L20.447 20.452zM5.927 7.994c-1.228 0-2.228-.999-2.228-2.228 0-1.229 1.002-2.228 2.228-2.228S8.156 4.537 8.156 5.766c-.001 1.229-1.003 2.228-2.229 2.228zM7.747 9.72h-3.518V20.45h3.518V9.72z"/></svg>
+                    <span class="font-medium text-gray-700">LinkedIn Profile</span>
+                </a>
+                <!-- Email -->
+                <a href="mailto:lawrencekelvin5000@gmail.com" class="flex items-center gap-2 bg-white rounded-full px-6 py-3 shadow-md transition-transform duration-200 hover:scale-105">
+                    <svg class="w-6 h-6 text-red-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M2.003 5.884L10.237 13.923 18.471 5.884c-.87-.525-1.914-.884-3.003-.884H5.003c-1.09 0-2.133.359-3.003.884zm20.471 8.232L15.986 11.231l5.487-5.347c.414.887.653 1.879.653 2.946v6.299zM2.529 11.231l5.487 2.885-5.487 5.347v-8.232zM19.997 19H4.003c-1.09 0-2.133-.359-3.003-.884L10.237 11.077 18.471 19.116c.87.525 1.914.884 3.003.884z"/></svg>
+                    <span class="font-medium text-gray-700">Email Me</span>
+                </a>
+                <!-- Phone -->
+                <a href="tel:+18623528572" class="flex items-center gap-2 bg-white rounded-full px-6 py-3 shadow-md transition-transform duration-200 hover:scale-105">
+                    <svg class="w-6 h-6 text-emerald-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19.034 16.79l-2.03-2.03a1.494 1.494 0 00-1.06-.44c-.38 0-.76.14-1.06.44l-1.57 1.57a1.494 1.494 0 01-1.06.44 1.494 1.494 0 01-1.06-.44l-2.76-2.76a1.494 1.494 0 01-.44-1.06c0-.38.14-.76.44-1.06l1.57-1.57a1.494 1.494 0 00.44-1.06c0-.38-.14-.76-.44-1.06l-2.03-2.03a1.494 1.494 0 00-1.06-.44H4.5c-.83 0-1.5.67-1.5 1.5v.5c0 1.9.9 3.7 2.4 5.2l2.76 2.76c1.5 1.5 3.3 2.4 5.2 2.4h.5c.83 0 1.5-.67 1.5-1.5v-1.97c0-.44-.14-.88-.44-1.06zM7 9v1h2v-1H7zm5 0v1h2v-1h-2zm-5 4v1h2v-1H7zm5 0v1h2v-1h-2z"/></svg>
+                    <span class="font-medium text-gray-700">Call Me (USA)</span>
+                </a>
+                 <a href="tel:+2347039316485" class="flex items-center gap-2 bg-white rounded-full px-6 py-3 shadow-md transition-transform duration-200 hover:scale-105">
+                    <svg class="w-6 h-6 text-emerald-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19.034 16.79l-2.03-2.03a1.494 1.494 0 00-1.06-.44c-.38 0-.76.14-1.06.44l-1.57 1.57a1.494 1.494 0 01-1.06.44 1.494 1.494 0 01-1.06-.44l-2.76-2.76a1.494 1.494 0 01-.44-1.06c0-.38.14-.76.44-1.06l1.57-1.57a1.494 1.494 0 00.44-1.06c0-.38-.14-.76-.44-1.06l-2.03-2.03a1.494 1.494 0 00-1.06-.44H4.5c-.83 0-1.5.67-1.5 1.5v.5c0 1.9.9 3.7 2.4 5.2l2.76 2.76c1.5 1.5 3.3 2.4 5.2 2.4h.5c.83 0 1.5-.67 1.5-1.5v-1.97c0-.44-.14-.88-.44-1.06zM7 9v1h2v-1H7zm5 0v1h2v-1h-2zm-5 4v1h2v-1H7zm5 0v1h2v-1h-2z"/></svg>
+                    <span class="font-medium text-gray-700">Call Me (Nigeria)</span>
+                </a>
+            </div>
+        </section>
+        
+        <!-- Footer Section -->
+        <footer class="text-center py-8 text-gray-500 text-sm mt-8">
+            <p>&copy; 2025 Paul Lawrence. All rights reserved.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        function toggleCollapse(button) {
+            const content = button.nextElementSibling;
+            const arrow = button.querySelector('.dropdown-arrow');
+            
+            if (content.classList.contains('open')) {
+                content.classList.remove('open');
+                arrow.classList.remove('open');
+            } else {
+                content.classList.add('open');
+                arrow.classList.add('open');
+            }
+        }
+    </script>
+
+</body>
+</html>
